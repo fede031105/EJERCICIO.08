@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Categorias - Agregar</title>
+</head>
+<body>
+<h1>Categorias - Agregar</h1>
+<a th:href="@{/categorias}">Regresar</a>
+<br><br>
+<form th:action="@{/categorias/guardar}" th:object="${categoria}" method="post">
+    <label>Nombre:</label><br>
+    <input type="text" th:field="*{nombre}" required/><br><br>
+
+    <label>Descripcion:</label><br>
+    <textarea th:field="*{descripcion}" rows="4" cols="50"></textarea><br><br>
+
+    <button type="submit">Guardar</button>
+</form>
+</body>
+</html>
